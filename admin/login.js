@@ -1,0 +1,3 @@
+const API_BASE='https://alshaqi.alwaysdata.net';
+const form=document.getElementById('loginForm'), pass=document.getElementById('password'), err=document.getElementById('error');
+form.addEventListener('submit',async e=>{e.preventDefault();err.textContent='';try{const r=await fetch(API_BASE+'/api.php?action=login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pass.value})});const d=await r.json();if(!d.ok){err.textContent=d.message||'كلمة المرور غير صحيحة';return}localStorage.setItem('bisan_admin_token',d.token);location.href='index.html'}catch(_){err.textContent='تعذر الاتصال بالخادم'}});

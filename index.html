@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7f8">
+<title>بيسان للدعاية والإعلان</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="page">
+  <section class="upload-card">
+    <div class="brand-mark" aria-hidden="true">ب</div>
+    <h1>بيسان للدعاية والإعلان</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input id="files" type="file" name="files[]" multiple hidden>
+      <label for="files" id="dropzone" class="dropzone">
+        <div class="upload-icon" aria-hidden="true">↑</div>
+        <div class="drop-title">اسحب الملفات هنا</div>
+        <div class="drop-sub">أو اضغط لاختيار الملفات</div>
+        <span class="choose">اختيار الملفات</span>
+      </label>
+
+      <div id="fileList" class="file-list"></div>
+      <div id="progressWrap" class="progress-wrap" hidden>
+        <div class="progress"><div id="progressBar"></div></div>
+        <div id="progressText">0%</div>
+      </div>
+      <button id="sendBtn" class="send" type="submit" disabled>إرسال الملفات</button>
+      <div id="status" class="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
